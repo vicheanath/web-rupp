@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>jQuery Content and Attribute</title>
+   </head>
+   <body>
+      <h1 id="content">ព្រះបរមរាជវាំង</h1>
+      <img width="500" height="350" id="attribute" src="../../image/PP1.jpg" alt="One">
+      <br>
+      <button id="RP" value="../../image/PP1.jpg">ព្រះបរមរាជវាំង</button>
+      <button id="IM" value="../../image/PP2.jpg">វិមានឯករាជ្យ</button>
+      <script src="../../script/jQuery/jquery-3.6.0.js"></script>
+      <script>
+         $(function(){
+            $("button").click(function(){
+                  $("#content").text( $(this).text() ); // text() ជា method សម្រាប់ទាញឬកែខ្លឹមសារជាអត្ថបទ។
+                  $("#attribute").attr("src",this.value);//attr()ជាmethodសម្រាប់ទាញឬកែគុណលក្ខណៈបានបញ្ជាក់។
+            });
+         });
+         
+      </script>
+   </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery Effect and Animation</title>
+      <style>
+         #effects, #effect, img{width:567px; height:345px; margin: 0 auto;}
+         h1,input{font-family:Times; font-variant:small-caps; text-align: center;font-weight: bold;}
+         h1{color:blue; margin:0;}
+         #fadeTo{width:4em;}
+      </style>
+   </head>
+   <body>
+      <div id="effects">
+         <div id="effect"><img src="../../image/សារមន្ទីជាតិ.jpg" alt="សារមន្ទីជាតិ"></div>
+         <form>
+            <input type="button" id="hide" value=" Hide ">
+            <input type="button" id="show" value=" Show ">
+            <input type="button" id="toggleHS" value=" Show | Hide ">
+            <input type="button" id="fadeOut" value=" Fade Out ">
+            <input type="button" id="fadeIn" value=" Fade In ">
+            <input type="button" id="fadeOI" value=" Fade Out | In ">
+            <input type="text" id="fadeTo" placeholder=" Fade % ">
+            <input type="button" id="slideUp" value=" Slide Up ">
+            <input type="button" id="slideDown" value=" Slide Down ">
+            <input type="button" id="slideUD" value=" Slide Up | Hide ">
+         </form>
+         <h1>jQuery Effects and Animations</h1>
+      </div>
+      <script src="../../script/jQuery/jquery-3.6.0.js"></script>
+      <script>
+         $(function(){
+            // កាលណាគេចុចប៊ូតុង លាក់រូបភាព
+            $("#hide").click(function(){ $("img").hide(); });
+            // កាលណាគេចុចប៊ូតុង បង្ហាញរូបភាព
+            $("#show").click(function(){ $("img").show(); });
+            // កាលណាគេចុចប៊ូតុង លាក់រូបភាពឬបង្ហាញរូបភាព អាស្រ័យស្ថានភាពបច្ចុប្បន្ន
+            $("#toggleHS").click(function(){ $("img").toggle(); });
+            // កាលណាគេចុចប៊ូតុង បន្ថយភាពច្បាស់នៃរូបភាពដល់០% ក្នុងរយៈពេល៥វិនាទី(៥ពាន់មីលីវិនាទី)
+            $("#fadeOut").click(function(){ $("img").fadeOut(5000); });
+            // កាលណាគេចុចប៊ូតុង បន្ថែមភាពច្បាស់នៃរូបភាពដល់១០០% ក្នុងរយៈពេល៥វិនាទី(៥ពាន់មីលីវិនាទី)
+            $("#fadeIn").click(function(){ $("img").fadeIn(5000); });
+             // កាលណាគេចុចប៊ូតុង បន្ថយឬបន្ថែមភាពច្បាស់នៃរូបភាពតាមស្ថានភាពបច្ចុប្បន្ន ក្នុងរយៈពេល៥វិនាទី
+            $("#fadeOI").click(function(){ $("img").fadeToggle(5000); });
+             // ក្រោយកែតម្លៃក្នុងប្រអប់អត្ថបទ ភាពច្បាស់នៃរូបភាពដូរតាមតម្លៃជាក់ស្តែង ក្នុងរយៈពេល៥វិនាទី
+             $("#fadeTo").change(function(){ $("img").fadeTo(5000, $(this).val()); });
+              // កាលណាគេចុចប៊ូតុង សារូបភាពទុក
+            $("#slideUp").click(function(){ $("img").slideUp(5000); });
+            // កាលណាគេចុចប៊ូតុង លារូបភាពមកវិញ
+            $("#slideDown").click(function(){ $("img").slideDown(5000); });
+            // គេចុចប៊ូតុង សារូបភាពទុកឬលារូបភាពមកវិញ អាស្រ័យស្ថានភាពបច្ចុប្បន្ន
+            $("#slideUD").click(function(){ $("img").slideToggle(5000); });
+         });
+         /*
+            ចូរដោនឡូដ Resources 4BS ហើយចម្លងឯកសារទាំង៦នៃ folder នេះដាក់ចូលក្នុង image folder
+         */
+      </script>
+   </body>
+</html>

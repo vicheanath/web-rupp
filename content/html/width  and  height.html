@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Width and Height</title>
+      <!-- internal CSS ឬ internal style -->
+      <style>
+         #b1, #i1{background-color:greenyellow; width:48px; height: 48px;
+                        border:2px groove dodgerblue; margin-bottom:32px;}
+         #b2, #i2{background-color:yellow;width:48px; height: 96px;
+                        border:2px ridge dodgerblue;margin-top:64px}
+         #b3, #i3{background-color:orange;width:64px; height: 24px;
+                        border:2px inset dodgerblue;}
+         #b4, #i4{background-color:orangered;width:96px; height: 16px;
+                        border:2px outset dodgerblue;}
+         #i1{border-radius:8px;}
+         #i2{border-top-left-radius: 8px; border-top-right-radius: 8px;}
+         #i3{border-top-left-radius: 8px; border-bottom-right-radius: 8px;}
+         #i4{border-bottom-left-radius: 8px; border-top-right-radius: 8px;}
+         #i1, #i2, #i3, #i4{margin-left:16px; margin-bottom:64px; padding:4px 8px;}
+      </style>
+   </head>
+   <body>
+      <h1>Width and Height</h1>
+      <h2>Block element</h2>
+      <p id="b1">#B1</p><p id="b2">#B2</p><p id="b3">#B3</p><p id="b4">#B4</p>
+      <h2>Inline element</h2>
+      <span id="i1"> Inline 1 </span><span id="i2"> Inline two </span>
+      <span id="i3"> Inline three </span><span id="i4"> Inline four </span>
+   </body>
+</html>

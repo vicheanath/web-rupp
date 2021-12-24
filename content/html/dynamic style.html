@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>dynamic style</title>
+      <style> #ds{display: block;}; </style>
+   </head>
+   <body>
+      <img id="ds" src="../../image/HTML5_Logo_128.png" alt="HTML 5">
+      <script>
+         let x =  (window.innerWidth - 128) / 2; //១២៨ជាទទឹងនៃរូបភាព។   
+         let y =  (window.innerHeight - 128) / 2; //១២៨ជាកម្ពស់នៃរូបភាព។
+         let ds = document.getElementById("ds");
+         /* ធាតុ.style.ឈ្មោះលក្ខណៈមិនសរសេរ-ហើយអក្សរជាប់នឹង-ត្រូវដូរទៅអក្សរធំ=តម្លៃ; */
+         function topLeft(){
+            ds.style.marginLeft = 0;
+            ds.style.marginTop = 0;
+         }
+         function topCenter(){
+            ds.style.marginLeft = x + "px";
+            ds.style.marginTop = 0;
+         }
+         function topRight(){
+            ds.style.marginLeft = window.innerWidth - 128 + "px";
+            ds.style.marginTop = 0;
+         }
+         function centerRight(){
+            ds.style.marginLeft = window.innerWidth - 128 + "px";
+            ds.style.marginTop = y + "px";
+         }
+         function bottomRight(){
+            ds.style.marginLeft = window.innerWidth - 136 + "px";
+            ds.style.marginTop = window.innerHeight - 136 + "px";
+         }
+         function bottomCenter(){
+            ds.style.marginLeft = x + "px";
+            ds.style.marginTop = window.innerHeight - 128 + "px";
+         }
+         function bottomLeft(){
+            ds.style.marginLeft = 0;
+            ds.style.marginTop = window.innerHeight - 128 + "px";
+         }
+         function centerLeft(){
+            ds.style.marginLeft = 0;
+            ds.style.marginTop = y + "px";
+         }
+         function centerCenter(){
+            ds.style.marginLeft = x + "px";
+            ds.style.marginTop = y + "px";
+         }
+         let i = 1;
+         function dss(){
+            switch(++i){
+               case 1:
+                  topCenter();break;
+               case 2:
+                  topRight();break;
+               case 3:
+                  centerRight(); break;   
+               case 4:
+                  bottomRight();break;
+               case 5:
+                  bottomCenter(); break;
+               case 6:
+                  bottomLeft(); break;
+               case 7:
+                  centerLeft(); break;
+               case 8:
+                  centerCenter();break;
+               default:
+                  topLeft();
+                  i = 0;   
+            }
+         }
+         window.setInterval(dss,1000);
+      </script>
+   </body>
+</html>

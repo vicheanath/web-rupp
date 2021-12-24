@@ -1,0 +1,8 @@
+table {border-collapse: collapse;} 
+/* Pseudo-element selector*/
+/* រើសបន្ទាតើទី១ របស់ធាតុ h1  */
+h1::first-line { font-variant: small-caps;}
+/* រើសធាតុ ដែលជាកូនធាតុទី១ នៃតារាង  */
+tr:nth-child(2n) {background-color:lightgray;}
+tr:nth-child(2n+1) {background-color:gray;}
+tr:nth-child(1){ background-color: black; color:white;}

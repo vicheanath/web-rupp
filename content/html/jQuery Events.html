@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>jQuery Event</title>
+   </head>
+   <body>
+      <form>
+         <p id="previous">Previous control: </p>
+         <p id="current">Current control: </p>
+         <input type="text" id="txtLastName" placeholder="Last Name">
+         <input type="text" id="txtFirstName" placeholder="First Name">
+         <input type="button" id="event" value=" Event" placeholder="Event">
+      </form>
+      <script src="../../script/jQuery/jquery-3.6.0.js"></script>
+      <script>
+         // click()  កូដដើរពេលគេចុចលើធាុត។
+         // dbclick()  កូដដើរពេលគេចុចពីរដងលើធាុត។
+         // mouseener() កូដដើរពេល mouse ចូលទៅកាន់ធាតុ។
+         // mouseleave() កូដដើរពេល mouse ចាកចេញពីធាតុ ។
+         // hover() ជាបន្សំនៃ mouseenter() និង mouseleave()។
+         // focus() កូដដើរពេលធាតុក្លាយជាធាតុបច្ចុប្បន្ន។
+         // blur() កូដដើរពេលធាតុលែងជាធាតុបច្ចុប្បន្ន។
+         $("input").focus(function(){ 
+            document.getElementById("current").textContent = "Current controls: " + this.placeholder;
+         });
+         $("input").blur(function(){ 
+            document.getElementById("previous").textContent = "Previous controls: " + this.placeholder;
+         });
+      </script>
+   </body>
+</html>

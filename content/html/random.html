@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>random number</title>
+      <style>
+         p{font:36px/16px "Trebuchet MS"; padding: 16px;
+             background-color: pink; text-align: center; }
+      </style>
+   </head>
+   <body>
+      <h1>random number</h1>
+      <h2>Math.random() ឱ្យលេខចៃដន្យពី ០ ទៅក្បែរ ១៖ </h2>
+      <p id="r1"></p>
+      <h2>Math.floor(Math.random()*(max - min)) + min; ឱ្យលេខចៃដន្យពី min ទៅ max - 1</h2>
+      <h3>Math.floor(Math.random()*(9 - 5)) + 5; ឱ្យលេខចៃដន្យពី 5 ទៅ 8 ៖ </h2>   
+      <p id="r2"></p>
+      <script>
+         let r1 = document.getElementById("r1");
+         let r2 = document.getElementById("r2");
+         function rnd(){
+            r1.textContent = Math.random();
+            r2.textContent = Math.floor((Math.random()*4) + 5);
+         }
+         window.setInterval(rnd, 500);
+      </script>
+   </body>
+</html>

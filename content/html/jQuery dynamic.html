@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery Content and Attribute</title>
+      <style>
+         img{display: block;}
+         img{width: 567px; height:345px; margin:0 auto 1px auto ;}
+         form{width: 16em; margin: 1px auto;}
+         input{width:8em; border-radius:4px; margin:0 auto; text-align: center;}
+         p{ text-align: center; font-variant: small-caps; color:dodgerblue; font-size: 20px;}
+      </style>
+   </head>
+   <body>
+      <img id="ds" src="../../image/វិមានឯករាជ្យ.jpg" alt="វិមានឯករាជ្យ">
+      <form>
+         <input type="text" id="width" placeholder="Image Width ">
+         <input type="text" id="height" placeholder="Image Height ">
+      </form>
+      <p id="dh"></p>
+      <script src="../../script/jQuery/jquery-3.6.0.js"></script>
+      <script>
+           /* .htmlជា method សម្រាប់ទាញយកឬកែរចនាសម្ព័នកូនធាតុនៃមេធាតុណាមួយ។                
+               .css ជា method សម្រាប់ទាញយកឬកែតម្លៃលក្ខណៈនៃការរចនាបានបញ្ជាក់
+               .val ជា method សម្រាប់ទាញយកឬកែតម្លៃធាតុនៅក្នុង form 
+               ដែលវាទទួលទិន្នន័យពីអ្នកប្រើប្រាស់ដូចជា text box, password ។ល។
+               .change ជា event កំណត់ឱ្យកូដដើរពេលគេបានកែតម្លៃធាតុនៅក្នុង form ។ */
+         $(function(){
+            $("#width").change(function(){ 
+               $("#ds").css( "width", $(this).val() );
+               $("#dh").html("width: " + $("#ds").css("width") + "; height: " + $("#ds").css("height") ); 
+            });  // ក្រោយពេលគេផ្លាស់ប្តូរតម្លៃរបស់ប្រអប់អត្ថបទទទឹង នោះទទឹងរូបភាពដូរដោយស្វ័យប្រវត្ត
+            $("#height").change(function(){ 
+               $("#ds").css("height", $(this).val());
+               $("#dh").html("width: " + $("#ds").css("width") + "; height: " + $("#ds").css("height") ); 
+             }); // ក្រោយពេលគេផ្លាស់ប្តូរតម្លៃរបស់ប្រអប់អត្ថបទកម្ពស់ នោះកម្ពស់រូបភាពដូរដោយស្វ័យប្រវត្ត
+         });
+      </script>
+   </body>
+</html>

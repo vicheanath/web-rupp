@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery Custom Effect and Animation</title>
+      <style>#ca{position:relative;}/*ធាតុមានអាយឌី ca កំណត់យកទីតាំងធៀបនិងទីតាំងបច្ចុប្បន្ន*/</style>
+   </head>
+   <body>
+      <img src="../../image/HTML5_Logo_128.png" alt="HTML5" id="ca">
+      <script src="../../script/jQuery/jquery-3.6.0.js"></script>
+      <script>
+         $(function(){ 
+            // ផ្តើមពី left:0 ទៅបញ្ចប់ត្រង់ left:250px ក្នុងរយៈពេល២វិនាទី
+            $("#ca").animate({left:"250px"},2000);
+            $("#ca").animate({top:"250px"},2000);
+            $("#ca").animate({left:"0", top:"0"},2000);
+         });
+      </script>
+   </body>
+</html>

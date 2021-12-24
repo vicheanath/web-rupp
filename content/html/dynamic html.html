@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>dynamic html</title>
+   </head>
+   <body>
+      <span id="t"></span>
+      <script>
+         function currentTime(){
+            let time = new Date(); // បង្កើតអថេរឈ្មោះ time តំណាងឱ្យកាលបរិច្ឆេទនិងពេលវេលាបច្ចុប្បន្ន។
+            let t =document.getElementById("t"); 
+            /* ប្លែងពេលវេលាបច្ចុប្បន្ន ជា ពេលវេលាក្នុងស្រុក រួចដាក់ជាខ្លឹមសារថ្មីនៃធាតុ t */
+            t.innerHTML = time.toLocaleTimeString();
+         }
+         window.setInterval(currentTime, 1000); //អនុគមន៌ currentTime ដើររាល់មួយវិនាទីម្តង។
+         /* 
+            setInterval(អនុគមន៌, ពេលវេលាគិតជាមីលីវិនាទី); 
+            setInterval នេះជាមុខងារមួយរបស់ window object ដែលកំណត់ឱ្យ អនុគមន៌បានបញ្ជាក់ឈ្មោះ
+            ដំណើរការសារចុះសារឡើង នៅពេលដល់វេលាកំណត់ជាមីលីវិនាទី។
+            ធាតុ.innerHTML = ខ្លឹមសារថ្មី; ដូរខ្លឹមសារថ្មីឱ្យធាតុ។
+
+            document ជា object មួយសម្គាល់ HTML document ពោលគឺ web page ហ្នឹងឯង។
+               document.getElementById("អាយឌី");
+                  ឧ. document.getElementById("t"); រើសធាតុមានអាយឌីសម្គាល់ t។
+               document.getElementsByClassName("ថ្នាក់នៃធាតុ");
+                  ឧ. document.getElementsByClassName("link"); រើសធាតុថិតក្នុងថ្នាក់សម្គាល់ link។
+               document.getElementsByTagName("ឈ្មោះធាតុ");     
+                  ឧ. document.getElementsByTagName("a"); រើសធាតុ a ទាំងអស់។
+         */
+        </script>  
+   </body>
+</html>

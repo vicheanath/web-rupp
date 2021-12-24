@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>objects in JavaScript</title>
+   </head>
+   <body>
+      <script>
+         /*    object + object + . . . + object = app
+            window ជា object មួយក្នុង JavaScript សម្រាប់សម្គាល់ browser window មួយ។
+               event កំណត់ពេលកូដត្រូវដើរ។
+            resize ជា event របស់ window object កំណត់ឱ្យកូដដើរពេលទំហំ window ដូរ។
+               method មុខងារដែល object អាចបំពេញ។
+            alert ជា method នាំ window object បំពេញមុខងារ រម្លឹកអ្នកប្រើដោយបង្ហាញសារ។
+               property កំណត់ឬដឹងពីលក្ខណៈសម្បត្តិបច្ចុប្បន្នរបស់ object
+            outerWidth, outerHeight, innerWidth, innerHeight សុទ្ធតែលក្ខណៈសម្បត្តិ។  */
+        function size(){
+           alert(" outer width:" + window.outerWidth + " outer height:" + window.outerHeight 
+                   + " inner width:" + window.innerWidth  + " inner height:" + window.innerHeight );
+        }
+        window.onload = size;
+        window.onresize = size;
+      </script>
+   </body>
+</html>

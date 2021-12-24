@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>jQuerySelector</title>
+   </head>
+   <body style="font-size:1.5rem ;">
+      <img src="../../image/PP3.jpg">
+      <img src="../../image/HTML5_Logo_128.png"><br>
+      <label class="caption">First Name: </label>
+      <input type="text" id="txtFirstName">
+      <label class="caption">Last Name</label>
+      <input type="text" id="txtLastName">
+      <input type="button" id="hide1" value="hide image">
+      <input type="button" id="hide2" value="hide label">
+      <input type="button" id="hide3" value="hide id">
+      <input type="button" id="hide4" value="hide class">
+      <script src="../../script/jQuery/jquery-3.6.0.js"></script>
+      <script>
+         /* 
+            $(selector) ធម្មតាត្រូវសរសេរក្នុងសញ្ញាធ្មេញកណ្តុរមួយគូរ ដោយសរសេរ
+                                   ដូច CSS selector បេះបិទ ដូចជា # គឺ អាយឌី, . គឺ ថ្នាក់ ។ល។
+            $(document) ជ្រើសរើស html document
+            $(this) ជ្រើសរើសធាតុដែលព្រឹត្តការណ៌បានកើតឡើងចំពោះ ឬ ធាតុបច្ចុប្បន្ននេះ
+         */
+        $("#hide1").click(function(){ $("img").hide();  });
+        $("#hide2").click(function(){ $(".caption").hide();  });
+        $("#hide3").click(function(){
+            $("#txtLastName").hide();
+            $("#txtFirstName").hide();
+            $(".caption").hide();
+        });
+        $("input").click(function(){ $(this).hide();  });
+      </script>
+   </body>
+</html>
