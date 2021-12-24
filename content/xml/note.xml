@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<node>
-    <to></to>
-    <from></from>
-    <heading></heading>
-    <body></body>
-</node>
+<?xml-stylesheet href="note.css" type="text/css"?>
+<notes>
+    <node>
+        <to>អ្នកបង្រៀន</to>
+        <from>អ្នកបង្រៀន</from>
+        <heading>prolog(xml declaration)</heading>
+        <body>
+        prolog(xml declaration) ប្រៀបដូចក្បាល ឯកសារ  Xml
+        វាមានគុណលក្ខណៈ ចាំបាច់ Version សម្រាប់បញ្ទាក់លេខកំណែភាសា Xml
+        ដែលបានប្រើ។ រីឯគុណលក្ខណ encoding ដែលបញ្ជាក់ការតាងអក្សរនិងសញ្ញា
+        គឺមិនសូវចាំបាច់នេះទេ។
+        </body>
+    </node>
+    <node>
+        <to>អ្នកបង្រៀន</to>
+        <from>អ្នកបង្រៀន</from>
+        <heading>xml-stylesheet</heading>
+        <body>
+        xml-stylesheet  បញ្ជាក់ថាត្រូវការប្រភេទឯកសារជា CSS 
+        ដូចមានក្នុងគុណលក្ខណៈ type ព្រមទាំងអាសយដ្ឋានរបស់ឯកសារ CSS បានបញ្ជាក់ក្នុងគុណលក្ខណៈ 
+        href ទើបអាចដំណើរការឯកសារ xml បាន។
+        </body>
+    </node>
+</notes>

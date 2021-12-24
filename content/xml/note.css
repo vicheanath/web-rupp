@@ -1,0 +1,23 @@
+node{
+    font-family: Bathambong;
+    background-color: yellow;
+    margin: 10px;
+    padding: 10px
+}
+*{
+    display: block;
+}
+
+to::before{
+    content: "ជូនចំព: ";
+}
+from::before{
+    content: "ពី: ";
+}
+heading{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Times;
+    font-variant: small-caps;
+    text-align: center;
+}
